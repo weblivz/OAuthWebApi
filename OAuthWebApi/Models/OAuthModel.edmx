@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OAuthModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="OAuthModelStoreContainer">
+    <EntitySet Name="Users" EntityType="OAuthModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClientAuthorizations" EntityType="OAuthModel.Store.ClientAuthorizations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Clients" EntityType="OAuthModel.Store.Clients" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Nonces" EntityType="OAuthModel.Store.Nonces" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SymmetricCryptoKeys" EntityType="OAuthModel.Store.SymmetricCryptoKeys" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UserClientAuthorization" Association="OAuthModel.Store.UserClientAuthorization">
+      <End Role="User" EntitySet="Users" />
+      <End Role="ClientAuthorization" EntitySet="ClientAuthorizations" />
+    </AssociationSet>
+    <AssociationSet Name="ClientClientAuthorization" Association="OAuthModel.Store.ClientClientAuthorization">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="ClientAuthorization" EntitySet="ClientAuthorizations" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClientAuthorizations">
+    <Key>
+      <PropertyRef Name="AuthorizationId" />
+    </Key>
+    <Property Name="AuthorizationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatedOnUtc" Type="datetime" Nullable="false" />
+    <Property Name="ClientId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Scope" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ExpirationDateUtc" Type="datetime" Nullable="true" />
+    <Property Name="User_Id" Type="int" Nullable="false" />
+    <Property Name="Client_ClientId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ClientId" />
+    </Key>
+    <Property Name="ClientId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientIdentifier" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ClientSecret" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Callback" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ClientType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nonces">
+    <Key>
+      <PropertyRef Name="Context" />
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="Timestamp" />
+    </Key>
+    <Property Name="Context" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="Timestamp" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SymmetricCryptoKeys">
+    <Key>
+      <PropertyRef Name="Bucket" />
+      <PropertyRef Name="Handle" />
+    </Key>
+    <Property Name="Bucket" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="Handle" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="ExpiresUtc" Type="datetime" Nullable="false" />
+    <Property Name="Secret" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="UserClientAuthorization">
+    <End Role="User" Type="OAuthModel.Store.Users" Multiplicity="1" />
+    <End Role="ClientAuthorization" Type="OAuthModel.Store.ClientAuthorizations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClientAuthorization">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientClientAuthorization">
+    <End Role="Client" Type="OAuthModel.Store.Clients" Multiplicity="1" />
+    <End Role="ClientAuthorization" Type="OAuthModel.Store.ClientAuthorizations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientId" />
+      </Principal>
+      <Dependent Role="ClientAuthorization">
+        <PropertyRef Name="Client_ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="OAuthModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="OAuthModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="OAuthModel.User" />
+          <EntitySet Name="ClientAuthorizations" EntityType="OAuthModel.ClientAuthorization" />
+          <EntitySet Name="Clients" EntityType="OAuthModel.Client" />
+          <EntitySet Name="Nonces" EntityType="OAuthModel.Nonce" />
+          <EntitySet Name="SymmetricCryptoKeys" EntityType="OAuthModel.SymmetricCryptoKey" />
+          <AssociationSet Name="UserClientAuthorization" Association="OAuthModel.UserClientAuthorization">
+            <End Role="User" EntitySet="Users" />
+            <End Role="ClientAuthorization" EntitySet="ClientAuthorizations" />
+          </AssociationSet>
+          <AssociationSet Name="ClientClientAuthorization" Association="OAuthModel.ClientClientAuthorization">
+            <End Role="Client" EntitySet="Clients" />
+            <End Role="ClientAuthorization" EntitySet="ClientAuthorizations" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Username" Nullable="false" />
+          <Property Type="String" Name="Password" Nullable="false" />
+          <NavigationProperty Name="ClientAuthorizations" Relationship="OAuthModel.UserClientAuthorization" FromRole="User" ToRole="ClientAuthorization" />
+        </EntityType>
+        <EntityType Name="ClientAuthorization">
+          <Key>
+            <PropertyRef Name="AuthorizationId" />
+          </Key>
+          <Property Type="Int32" Name="AuthorizationId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="CreatedOnUtc" Nullable="false" />
+          <Property Type="Int32" Name="ClientId" Nullable="false" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="Scope" Nullable="false" />
+          <Property Type="DateTime" Name="ExpirationDateUtc" Nullable="true" />
+          <NavigationProperty Name="User" Relationship="OAuthModel.UserClientAuthorization" FromRole="ClientAuthorization" ToRole="User" />
+          <NavigationProperty Name="Client" Relationship="OAuthModel.ClientClientAuthorization" FromRole="ClientAuthorization" ToRole="Client" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ClientId" />
+          </Key>
+          <Property Type="Int32" Name="ClientId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ClientIdentifier" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ClientSecret" MaxLength="50" Nullable="true" />
+          <Property Type="String" Name="Callback" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Int32" Name="ClientType" Nullable="false" />
+          <NavigationProperty Name="ClientAuthorizations" Relationship="OAuthModel.ClientClientAuthorization" FromRole="Client" ToRole="ClientAuthorization" />
+        </EntityType>
+        <EntityType Name="Nonce" >
+          <Key>
+            <PropertyRef Name="Context" />
+            <PropertyRef Name="Code" />
+            <PropertyRef Name="Timestamp" />
+          </Key>
+          <Property Type="String" Name="Context" Nullable="false" MaxLength="4000" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="4000" />
+          <Property Type="DateTime" Name="Timestamp" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SymmetricCryptoKey" >
+          <Key>
+            <PropertyRef Name="Bucket" />
+            <PropertyRef Name="Handle" />
+          </Key>
+          <Property Type="String" Name="Bucket" Nullable="false" MaxLength="4000" />
+          <Property Type="String" Name="Handle" Nullable="false" MaxLength="4000" />
+          <Property Type="DateTime" Name="ExpiresUtc" Nullable="false" />
+          <Property Type="Binary" Name="Secret" Nullable="false" />
+        </EntityType>
+        <Association Name="UserClientAuthorization">
+          <End Type="OAuthModel.User" Role="User" Multiplicity="1" />
+          <End Type="OAuthModel.ClientAuthorization" Role="ClientAuthorization" Multiplicity="*" />
+        </Association>
+        <Association Name="ClientClientAuthorization">
+          <End Type="OAuthModel.Client" Role="Client" Multiplicity="1" />
+          <End Type="OAuthModel.ClientAuthorization" Role="ClientAuthorization" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OAuthModelStoreContainer" CdmEntityContainer="OAuthModelContainer">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(OAuthModel.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientAuthorizations">
+      <EntityTypeMapping TypeName="IsTypeOf(OAuthModel.ClientAuthorization)">
+        <MappingFragment StoreEntitySet="ClientAuthorizations">
+          <ScalarProperty Name="AuthorizationId" ColumnName="AuthorizationId" />
+          <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Scope" ColumnName="Scope" />
+          <ScalarProperty Name="ExpirationDateUtc" ColumnName="ExpirationDateUtc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="IsTypeOf(OAuthModel.Client)">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ClientIdentifier" ColumnName="ClientIdentifier" />
+          <ScalarProperty Name="ClientSecret" ColumnName="ClientSecret" />
+          <ScalarProperty Name="Callback" ColumnName="Callback" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ClientType" ColumnName="ClientType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nonces">
+      <EntityTypeMapping TypeName="IsTypeOf(OAuthModel.Nonce)">
+        <MappingFragment StoreEntitySet="Nonces">
+          <ScalarProperty Name="Context" ColumnName="Context" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SymmetricCryptoKeys">
+      <EntityTypeMapping TypeName="IsTypeOf(OAuthModel.SymmetricCryptoKey)">
+        <MappingFragment StoreEntitySet="SymmetricCryptoKeys">
+          <ScalarProperty Name="Bucket" ColumnName="Bucket" />
+          <ScalarProperty Name="Handle" ColumnName="Handle" />
+          <ScalarProperty Name="ExpiresUtc" ColumnName="ExpiresUtc" />
+          <ScalarProperty Name="Secret" ColumnName="Secret" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserClientAuthorization" TypeName="OAuthModel.UserClientAuthorization" StoreEntitySet="ClientAuthorizations">
+      <EndProperty Name="User">
+        <ScalarProperty Name="Id" ColumnName="User_Id" />
+      </EndProperty>
+      <EndProperty Name="ClientAuthorization">
+        <ScalarProperty Name="AuthorizationId" ColumnName="AuthorizationId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientClientAuthorization" TypeName="OAuthModel.ClientClientAuthorization" StoreEntitySet="ClientAuthorizations">
+      <EndProperty Name="Client">
+        <ScalarProperty Name="ClientId" ColumnName="Client_ClientId" />
+      </EndProperty>
+      <EndProperty Name="ClientAuthorization">
+        <ScalarProperty Name="AuthorizationId" ColumnName="AuthorizationId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="OAuthModel" >
+        <EntityTypeShape EntityType="OAuthModel.User" Width="1.5" PointX="0.5" PointY="0.5" Height="1.427958984375" />
+        <EntityTypeShape EntityType="OAuthModel.ClientAuthorization" Width="2.25" PointX="3.5" PointY="1.375" Height="2.2496956380208331" />
+        <EntityTypeShape EntityType="OAuthModel.Client" Width="1.5" PointX="0.5" PointY="2.75" Height="2.0853483072916665" />
+        <EntityTypeShape EntityType="OAuthModel.Nonce" Width="1.5" PointX="7.5" PointY="0.75" Height="1.4279589843749996" />
+        <EntityTypeShape EntityType="OAuthModel.SymmetricCryptoKey" Width="2.25" PointX="7" PointY="2.625" Height="1.5923063151041665" />
+        <AssociationConnector Association="OAuthModel.UserClientAuthorization">
+          <ConnectorPoint PointX="2" PointY="1.7336531575520835" />
+          <ConnectorPoint PointX="3.5" PointY="1.7336531575520835" />
+        </AssociationConnector>
+        <AssociationConnector Association="OAuthModel.ClientClientAuthorization">
+          <ConnectorPoint PointX="2" PointY="3.1873478190104167" />
+          <ConnectorPoint PointX="3.5" PointY="3.1873478190104167" />
+        </AssociationConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

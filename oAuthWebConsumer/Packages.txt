@@ -1,0 +1,1 @@
+﻿http://nuget.org/packages/DotNetOpenAuth.OAuth2.Client/0.25.0-draft1

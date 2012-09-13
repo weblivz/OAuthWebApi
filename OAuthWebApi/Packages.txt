@@ -1,0 +1,3 @@
+﻿http://nuget.org/packages/DotNetOpenAuth.OAuth2.ResourceServer
+https://nuget.org/packages/DotNetOpenAuth.OAuth2.AuthorizationServer/0.25.0-draft1
+http://nuget.org/packages/Microsoft.IdentityModel
