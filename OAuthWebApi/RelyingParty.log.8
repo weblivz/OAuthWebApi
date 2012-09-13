@@ -1,784 +1,0 @@
-2012-09-12 13:25:29,076 (GMT+1) [10] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 13:25:30,211 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 13:25:30,211 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 13:25:30,211 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 13:25:30,211 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenResourceOwnerPasswordCredentialsRequest message: {username,
-password,}
-2012-09-12 13:25:30,212 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 13:25:30,212 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 13:25:30,212 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 13:25:30,212 (GMT+1) [11] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenRefreshRequestAS (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 13:25:30,212 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenRefreshRequestAS
-2012-09-12 13:25:30,212 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenRefreshRequestAS (2.0) message:
-	refresh_token: Fr0J!IAAAAC_fJKB22ahxDEnEQucVfw_1M3LcaW8XRSFGD2n8nQRywQAAAAEUBrkGZgX8QLqWlnXNcSvAK8WxSEiqmVzym3InNnPPMCfi1iTfcUfYsH5MgG5_iZVamNxSCeVL_Qy5u6QcrFgfYWyS7CBFvVdo9sFRYGlLFPq9qxhmvocFIiu6W-9WubON0VX_lydL_S0G11pKFMCgcATJs7Slh3424CKqMw1y0nBHIBpgiySuql42JB4YhoqQuDViBmFzQi-HBkGs2axdw2it7Dzxib6N9PmBZAwBT8TRSOc1RJ4DFs06C_30P3s
-	grant_type: refresh_token
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 13:25:30,216 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 13:25:30,233 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 13:25:30,233 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenRefreshRequestAS (2.0) message is: 
-	refresh_token: Fr0J!IAAAAC_fJKB22ahxDEnEQucVfw_1M3LcaW8XRSFGD2n8nQRywQAAAAEUBrkGZgX8QLqWlnXNcSvAK8WxSEiqmVzym3InNnPPMCfi1iTfcUfYsH5MgG5_iZVamNxSCeVL_Qy5u6QcrFgfYWyS7CBFvVdo9sFRYGlLFPq9qxhmvocFIiu6W-9WubON0VX_lydL_S0G11pKFMCgcATJs7Slh3424CKqMw1y0nBHIBpgiySuql42JB4YhoqQuDViBmFzQi-HBkGs2axdw2it7Dzxib6N9PmBZAwBT8TRSOc1RJ4DFs06C_30P3s
-	grant_type: refresh_token
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 13:25:30,236 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 13:25:30,236 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 13:25:30,241 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 13:25:30,241 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAABvJOmZiaHntXuqzMOVwuM3JOatnScKpFIsKEl5B5yB1HfihL6-ztJGjz9grF4Dr6yIGFmE3i05jlJBN0UxqhbzFN_azOXaaiQ1Rc5oOGaUoWDWiieZtOQrATbnlD3K6PZG3y20GpPC1WNcfQDfl4jCCLaBNho4eq6Ci3V14klvkNAEAAIAAAAC1ze7geY3C0eunEu2Lv1BlFq5qDJ2IPxwlYvEpFfcu6FqhliQrsFetOLab9WLYg3_MLjYVYvuuNEKBGNCHmHuOrU0Osn8tLdFp0ivraKVS3IHR3lqRBFPWys4glkqGKFwTgXMWHf-SyQ_rpafj02ZigbInvD237hGNWaVW_X8mXeVfhu3bCTs-rfUnB7e3lkDgLsCubj2G_ZqpBPXc1Ndm09N0TLQBrQciMvZGT-IynttpmQCJssHB3FMvYTi3X0-ddx2pOG1dpOj4eUJCnaZnEoSVSl7KBpm8-Z9heLbjlsjZeQRZIuiQtLniSqFQiWr-La9Eloquh4iiJQbdEpjCsOEso2WKJUGy1Jj3wJWvCFDDOTLKNBZ__P5UlTxNUNeuEp4UzZuBrtr7edXjFmT7
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAOejfciSHPTRRwMvTsdnl2OxAXfBwwhXzzZDMN7aphjUwQAAAAHfBFwtVhcpk3kAelvYcp5zARdE8AWrxjkDyWYRrLJXp9g98wHQeMDvlilQ2TTLl0Doy69Kir1m4pkI2d9SBUR4O2E1BzlppC6MXw3UB-mko3fBk65LxEfKFhqbvd4RKPBWS02bVi3iRojs7nzb8erXQ0-agwM0DR8t7Vn0SEDTQJi9SYhVEhhG3Ep_0hwLsWCOu4RtIDyjJLky4RE_fKEd2byfm3fE81saN_Cfz0KT0e0cgxxZfgK-Xu0zJrF0XaE
-	scope: http://localhost:30777/api/values
-
-2012-09-12 13:25:30,241 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 13:25:56,193 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 13:25:56,193 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 13:25:56,193 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 13:25:56,193 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 13:25:56,193 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 13:25:56,193 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 13:25:56,193 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 13:25:56,193 (GMT+1) [11] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 13:25:56,194 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 13:25:56,194 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 13:25:56,194 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 13:25:56,784 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 13:25:56,784 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 13:25:56,798 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 13:25:56,798 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 13:25:56,847 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 13:25:56,847 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAABtg_AaWLW6MdnIJFXwaMywS3RQX6qg1EB5UhjvPt0wcGO0VqgSD6QItpZQLxK1oE9OkCeaRdnd2KIV6egC4clVgvaQp0pR3TwqdjAQSju2UnkdcQkGwL6C54w5FsHgWiAKJCpANIR6Ct2j-HiEVK28NeJuwCgqFMVeiX3fWFV1kNAEAAIAAAABU3PtirCiivqaH5DMFCU_4pXl2Zi77OsfpR0cFnWRY-OVECos9xTjt9lyAfxAuAh4B1rxW3IgAtr7IfVJpyuY2ZJTFRRIaexUZ4tUKHmY7_g4wdbCSiyz_mvmLhQpqSTHiFRcd3-NzWLZyA54Fk03bY56Ptwv3tXGq8QVVLoFLExz9kfJjBOwlQLnQblfrxeKMSgk1sMeFnH99uu3TOk0MqbRh99S7J1D9dR_ZB_jRWYKgGC7eayZ0gBa5a_Nzq7j9e_6XOfJWnkqyxIfbF1oprL5LboGuNBJQ266N8QLlxQybY3ZbzIwiF_5yz2eO9ed7a1Po6dtOFNhzgqUIxDCHZAtHVQJ3qnRAOhozQG5na0tYDTvaFOsLLhJfgIQ21QPGQKQ43nWf6gnKL-ejEwK2
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAAWDGfOFRoP0-Q230ytzEkOQESDfsiP0W7SeKLqvS75awQAAAAGe2c8RYBy-dxU0z5AUjD58sN9DQyzhAhul5ytSRDkPrnbBvObLA2aXBG7aUVYij1R3iLnrLK7gHmxwi6ktKHawwkB2GrpfzV_dFqssZMAO4itiVi7Koy2EQugI0ES1P6giAB4UxSrV-xxW6Jf1W95pTQbu_bDkuEdwz19sTmomO_CrqLgwgvFFplFcNckgjYympWZr6qrxawbgPdgYYRkR3FaGtQX3owO9JaorNqj5Zs_vViKYDfBemCS2mxRHSqw
-	scope: http://localhost:30777/api/values
-
-2012-09-12 13:25:56,847 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 13:25:56,930 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 13:25:56,930 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 13:25:56,930 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 13:25:56,930 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenResourceOwnerPasswordCredentialsRequest message: {username,
-password,}
-2012-09-12 13:25:56,930 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 13:25:56,931 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 13:25:56,931 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 13:25:56,931 (GMT+1) [11] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenRefreshRequestAS (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 13:25:56,931 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenRefreshRequestAS
-2012-09-12 13:25:56,931 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenRefreshRequestAS (2.0) message:
-	refresh_token: Fr0J!IAAAAAWDGfOFRoP0-Q230ytzEkOQESDfsiP0W7SeKLqvS75awQAAAAGe2c8RYBy-dxU0z5AUjD58sN9DQyzhAhul5ytSRDkPrnbBvObLA2aXBG7aUVYij1R3iLnrLK7gHmxwi6ktKHawwkB2GrpfzV_dFqssZMAO4itiVi7Koy2EQugI0ES1P6giAB4UxSrV-xxW6Jf1W95pTQbu_bDkuEdwz19sTmomO_CrqLgwgvFFplFcNckgjYympWZr6qrxawbgPdgYYRkR3FaGtQX3owO9JaorNqj5Zs_vViKYDfBemCS2mxRHSqw
-	grant_type: refresh_token
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 13:25:56,939 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 13:25:56,965 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 13:25:56,965 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenRefreshRequestAS (2.0) message is: 
-	refresh_token: Fr0J!IAAAAAWDGfOFRoP0-Q230ytzEkOQESDfsiP0W7SeKLqvS75awQAAAAGe2c8RYBy-dxU0z5AUjD58sN9DQyzhAhul5ytSRDkPrnbBvObLA2aXBG7aUVYij1R3iLnrLK7gHmxwi6ktKHawwkB2GrpfzV_dFqssZMAO4itiVi7Koy2EQugI0ES1P6giAB4UxSrV-xxW6Jf1W95pTQbu_bDkuEdwz19sTmomO_CrqLgwgvFFplFcNckgjYympWZr6qrxawbgPdgYYRkR3FaGtQX3owO9JaorNqj5Zs_vViKYDfBemCS2mxRHSqw
-	grant_type: refresh_token
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 13:25:56,968 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 13:25:56,968 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 13:25:56,976 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 13:25:56,976 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAAFNVECqEwSlxRmCS5zmtiIWIQF4ggtb8gHxm0XHVVCJI74PglU5og_ybKA8kYX4JB6MuiQCNYKwxx0gfInzQC1m0aEGUP9vI1Hh2Eu8NH0S6VMxQTpwpJu8bgd1Mgc9da1z5bJ-P-iMiq6RqBlaO5zwwSwauh5Zbqi80XBUb-d0SNAEAAIAAAABKEk6qQ57OyFrpw9u26PLhGIEO2ACE-nbLZ0Rhlhdr-Xp-UIyrfXjdnsKwqzp2Mih3MzUHz5ktxE9gh90jfNTtASMmEpGZT1__Fc0IuvDH288Rj31ffiBCYdBHR7iCL0Pasro9MoSz9e6zMJxH9476sbHcgPjRvu4R8yaFi1OxQTW59Ns7NOHU_JB8YjG-4PPiBkOc5qU2234Kvu-8jLA0gg7n6aTRO6nSAkRtp8IXUC8_ZSeHNBSeAJ9dPExzlUpgXSXQdBcXoUK9By8M-g7jsrIWlNauF43mnAMLl3yOi7ATQb7YZalcs7-oUM89qXNCfBrvFA7Eyf9vF-tIo2OiaLnO875Liant2-vSRCFBqD_PjtP9NfZCE9wwsTYE-ET6Xwjwpg4Uvca6DFIhLCY9
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAKp3jS80dxCBxxZsTA283S_trqY93MfteDUrYfz6BDrrwQAAAAGKjzGugeY1Ay-DDNrSHgEXMySS2q-4P5V-XcxbEyrWHHlF1od4KnC9tw_ji_ofzIxwKtKFzw6dWUvpPaakXhZ49Dy5wOFP-LnFDCqgfUhx9i9HDIv-mzsugXy8TrgZMsPvL_MkNVrQfSpPsVtSfVFlYy91Y2JDLwiv032-m61cTt3HA4VOBge2c39bL9bhenHiIL-fq1gd42za3VJkdtcBe9OgIN5VBOlx1TpFahaxds3Iei6ldH2WlLIvfELa16M
-	scope: http://localhost:30777/api/values
-
-2012-09-12 13:25:56,976 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 13:30:01,002 (GMT+1) [5] INFO  DotNetOpenAuth - DotNetOpenAuth.Core, Version=4.1.0.12182, Culture=neutral, PublicKeyToken=2780ccd10d57b246 (official)
-2012-09-12 13:30:01,122 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Message type EndUserAuthorizationImplicitRequest has more than one message part named response_type.  Inherited members will be hidden.
-2012-09-12 13:30:01,149 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 13:30:01,150 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 13:30:01,164 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 13:30:01,166 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 13:30:01,169 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 13:30:01,169 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 13:30:01,169 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 13:30:01,172 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 13:30:01,181 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 13:30:01,187 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 13:30:01,192 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 13:30:01,499 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 13:30:01,499 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 13:30:01,511 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 13:30:01,512 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 13:30:49,152 (GMT+1) [5] INFO  DotNetOpenAuth - DotNetOpenAuth.Core, Version=4.1.0.12182, Culture=neutral, PublicKeyToken=2780ccd10d57b246 (official)
-2012-09-12 13:30:49,160 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Message type EndUserAuthorizationImplicitRequest has more than one message part named response_type.  Inherited members will be hidden.
-2012-09-12 13:30:52,180 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 13:30:52,237 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 13:30:52,278 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 13:30:52,281 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 13:30:52,284 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 13:30:52,285 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 13:30:52,285 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 13:30:52,288 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 13:30:52,302 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 13:30:52,307 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 13:30:52,316 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 13:30:52,776 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 13:30:52,778 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 13:30:52,792 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 13:30:52,793 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:41:06,011 (GMT+1) [5] INFO  DotNetOpenAuth - DotNetOpenAuth.Core, Version=4.1.0.12182, Culture=neutral, PublicKeyToken=2780ccd10d57b246 (official)
-2012-09-12 14:41:06,056 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Message type EndUserAuthorizationImplicitRequest has more than one message part named response_type.  Inherited members will be hidden.
-2012-09-12 14:41:06,074 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:41:06,076 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:41:06,090 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 14:41:06,094 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:41:06,095 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:41:06,095 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:41:06,095 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:41:06,098 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:41:06,108 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 14:41:06,110 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:41:06,118 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:41:06,396 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:41:06,396 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:41:06,412 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:41:06,413 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:41:06,455 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:41:06,458 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAAF_vhSbir70dhr2ww2tN1pgtgyi8YOikQWe0cT-XuhjB6M-9D6GcKQLkD2GBmJavMj8GtOqpJiE3bU6chF_OA1siqBH9v93PUTeCvncUBuQlptJaclBPnaB2IDZ40t4D7eIpepVbquv0kOgZuf43GnY_OVKwRIxM1nryEbb_rHvMNAEAAIAAAADGOA7_nlS9dZNQeQPK3QALruadT2-yZ7kkr8sqF7iIGgDC9fEbiKOMqGHzNCC73hq10LPdA56x9bTc62CFR13khWnBxKXnL_ovTrWvD4bFj_-mIwIZKPxdrqd0bwFaI1d_yywRajw0LKV9XVr4Bfzqq90jCF5eP26DAp5kp0kDHh7iPPEoZuyNQ_EFldA1FQrfAhPGYQiSUCfyJjgEbHnOB_UeEx8rImUBOCvXPkA2cJjP1hknk9-bXytSkxP9zHv2y-L6XXfwcgoqBxzBqFvb5gT88ibkdawPXVd1Kg5EP-16XCC1QmZfb-aWGyWl0keo6EKUrdbIBwEMLqm8Bcx7hVhIq9KdjXj-pX5T4OWHh_djxSFdEq9ZOYDSuugOdebbUH7VwzudOwOQeFjgXtaK
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAHN0QRDtIkCic9LBPRjYDzfLnMczM3SpnPj0rz1vJT05wQAAAAGDFlEBMzY75m8fG5d3Y6L-96i_53aHrthPD4igf-e0_Sr5WJMXRNk01yN0Qv9YjyzIc04MAmJhGIJSfdz_jt8KOlYpREkmjOcaebheZ2Mqw-tzGUOwY31OCkaWsec4VsQstjSoAmtKRo2oQbUTS0sr8I6VQznw9Azudw_0lOp9Qol0WB2pFelcCjJZOXsHnBzFqQgMEuGzyMkwZDmaeVUzG_ePFs1QOLpS9tSEpOkEblLhGRhdh-Tmwhlo1SC3irA
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:41:06,458 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:41:06,553 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:41:06,553 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:41:06,553 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:41:06,553 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenResourceOwnerPasswordCredentialsRequest message: {username,
-password,}
-2012-09-12 14:41:06,553 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:41:06,553 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:41:06,553 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:41:06,553 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenRefreshRequestAS (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:41:06,553 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenRefreshRequestAS
-2012-09-12 14:41:06,553 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenRefreshRequestAS (2.0) message:
-	refresh_token: Fr0J!IAAAAHN0QRDtIkCic9LBPRjYDzfLnMczM3SpnPj0rz1vJT05wQAAAAGDFlEBMzY75m8fG5d3Y6L-96i_53aHrthPD4igf-e0_Sr5WJMXRNk01yN0Qv9YjyzIc04MAmJhGIJSfdz_jt8KOlYpREkmjOcaebheZ2Mqw-tzGUOwY31OCkaWsec4VsQstjSoAmtKRo2oQbUTS0sr8I6VQznw9Azudw_0lOp9Qol0WB2pFelcCjJZOXsHnBzFqQgMEuGzyMkwZDmaeVUzG_ePFs1QOLpS9tSEpOkEblLhGRhdh-Tmwhlo1SC3irA
-	grant_type: refresh_token
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:41:06,565 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:41:06,617 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:41:06,617 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenRefreshRequestAS (2.0) message is: 
-	refresh_token: Fr0J!IAAAAHN0QRDtIkCic9LBPRjYDzfLnMczM3SpnPj0rz1vJT05wQAAAAGDFlEBMzY75m8fG5d3Y6L-96i_53aHrthPD4igf-e0_Sr5WJMXRNk01yN0Qv9YjyzIc04MAmJhGIJSfdz_jt8KOlYpREkmjOcaebheZ2Mqw-tzGUOwY31OCkaWsec4VsQstjSoAmtKRo2oQbUTS0sr8I6VQznw9Azudw_0lOp9Qol0WB2pFelcCjJZOXsHnBzFqQgMEuGzyMkwZDmaeVUzG_ePFs1QOLpS9tSEpOkEblLhGRhdh-Tmwhlo1SC3irA
-	grant_type: refresh_token
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:41:06,620 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:41:06,620 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:41:06,627 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:41:06,627 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAAIOHYPXymz0prZ5YRs3gia7kd_lCrXTIoCU60U69hnkQ0lZUdlkXYH08lHS-EKjaMth8SOCztuco4Okz0tLMVZbtgxfSJ5zfHW2a0a2RgdU3fNfQ2iM-zR0Opd6ammat_nAhnkAaviRkk68wnBxbex9qydOOMQ7JdgqQLAX-sxdJNAEAAIAAAABa9_zLZjKm2Cc975kWsHbR8wHOp8-kZM7ll3BJrdOjvvsSNh3dBxQYKNaXnlwp0iidv7VkVmZo_ID3MlH1mDl_mt8lEusITJa8hEE-4Bm7Au0_HxcjkdhuSGyL39n4kn0Ke6gh4kVIF8ftFHOZ8TXdBHkCXEO7AJNdVJTlFXckzV1ru8oGK9XsNR9huqEl39OSU0FDDwAbe8ZQZ4G7Iai9ISaptP_SWcRzEonoNCyUJ3hxecuEq6Ic7E6tMarz19heHYxktbK8Mnn7ED5hNnvvzGcmYqKI54hJfbK14aIdhcXDMo6Fv-iF_cBZ_CpIvoBATfLzjTbt8378ex6KGvshp9abByxEmz5gtr6cpSX_NjqmLh2Qi9b3azo8ehp4e32camdr3Rx7NjRUfIEwDhlm
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAHqeTpR4m0zgciNEX0p7z8XVZy1wVuFVbnmKN0oHJD1FwQAAAAE2AV_tQ6g6I1LgikFfDWEWUWqhfYuVVsD3dm5WcQa8CJNjOw80TQj4PJkGx3SSdXbyJ7cMouPMo67Ll0yqEoZfx4r1EqpT2PEwMKhAmstO56FqFOSvY8Jqq7kZSBs4ceTRWlLmJJVyDOcaC1voLs1WAlPBsJaY7Ux_ltiGTT__gHAss3SaMb3_qioTMtKcNd0M8JOgL31RQJ5hRiSkHOANGe3itJRhl2rgJoKY84CV87rk_x2aRbsCXH2wyMhBkz0
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:41:06,627 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:41:14,593 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:41:14,593 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:41:14,593 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 14:41:14,593 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:41:14,593 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:41:14,593 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:41:14,593 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:41:14,593 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:41:14,593 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 14:41:14,593 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:41:14,593 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:41:14,607 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:41:14,607 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:41:14,611 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:41:14,611 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:41:14,617 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:41:14,617 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAAHPjlHXBarpbhhvCb_TmAXW27zkG2optKe1eZXoUSQTJ0UrTc3aTgDLZ-TXeNkbzZ1I42IaukK8AIPKfzzYYljGwHngpctoLES21jmIow7PvVcqdEtMkAOXgTwiOKN44k9TYP2N_lSfgfD0iJ6Oiz7OakrsSDtssMX1sKfeZ5ClpNAEAAIAAAACTDEJ2BODtbzmXaurj-4nvYKCAd3YdnhbCNfSeWpk2-c1wNScCI6PYwlxCqZhT-D5KIG26rooCzzJWBmMNfOtdJRfT2HtHxYlgsecCFljPXhEu7tkMGLirK2vE8A0LbpffLXyFQz22hRLeK0cmP3IgAQPZkmnWkflgXk5L_Z6fTjl9XhtAa7iW8d7016NVgnTlKkOjeiRK7nP6yxK0gF6kr73Fuq4p-800Ofjwp-7Mbg7LxeLkN2wHP2d-wlnlzvLPyRRYYCpqnjDq2f-bI5d1SZ5yiJr9SJmTtV8Oz39kOyhW7ke6-N9maXEQOSeBtbUlL8O9MjBdNgSq3kVe7CvKnv-GC6sIL1cK-PHdAVzxVwJI60cjLSq10F-nOeljzIqmWReQx6S9vdB-9iciyPI4
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAIiNO9gSfQ2Rky_7UcpTLVFF5V0b71NFzlMCGWSh2x24wQAAAAGLL2eB2CO-1Q1uV1oXqpCTwXgFO-tUn8OIBS-SJcTxDMhIlEiU5uj2Vow9Wk2FUMkxjHOq03f04xzw7uGMrrlq2oL73QGGt1KRJA_Ayd0A2APlGDwPl4JqqVIPNDXHmX6Bc5FS16L9b4B3y2YOtvKkOF_NgLcxXmhMnh9krm2QLKvSLy8RoV5tZ9_KLiElLehGr7KMMviAiAWhZLbRQnu4G81CjDcJejJiwifSb7XJUS8U1XFKD7ynPgCI_3yd-KA
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:41:14,617 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:41:14,701 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:41:14,701 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:41:14,701 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:41:14,701 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenResourceOwnerPasswordCredentialsRequest message: {username,
-password,}
-2012-09-12 14:41:14,701 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:41:14,701 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:41:14,701 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:41:14,701 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenRefreshRequestAS (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:41:14,701 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenRefreshRequestAS
-2012-09-12 14:41:14,701 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenRefreshRequestAS (2.0) message:
-	refresh_token: Fr0J!IAAAAIiNO9gSfQ2Rky_7UcpTLVFF5V0b71NFzlMCGWSh2x24wQAAAAGLL2eB2CO-1Q1uV1oXqpCTwXgFO-tUn8OIBS-SJcTxDMhIlEiU5uj2Vow9Wk2FUMkxjHOq03f04xzw7uGMrrlq2oL73QGGt1KRJA_Ayd0A2APlGDwPl4JqqVIPNDXHmX6Bc5FS16L9b4B3y2YOtvKkOF_NgLcxXmhMnh9krm2QLKvSLy8RoV5tZ9_KLiElLehGr7KMMviAiAWhZLbRQnu4G81CjDcJejJiwifSb7XJUS8U1XFKD7ynPgCI_3yd-KA
-	grant_type: refresh_token
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:41:14,706 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:41:14,726 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:41:14,726 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenRefreshRequestAS (2.0) message is: 
-	refresh_token: Fr0J!IAAAAIiNO9gSfQ2Rky_7UcpTLVFF5V0b71NFzlMCGWSh2x24wQAAAAGLL2eB2CO-1Q1uV1oXqpCTwXgFO-tUn8OIBS-SJcTxDMhIlEiU5uj2Vow9Wk2FUMkxjHOq03f04xzw7uGMrrlq2oL73QGGt1KRJA_Ayd0A2APlGDwPl4JqqVIPNDXHmX6Bc5FS16L9b4B3y2YOtvKkOF_NgLcxXmhMnh9krm2QLKvSLy8RoV5tZ9_KLiElLehGr7KMMviAiAWhZLbRQnu4G81CjDcJejJiwifSb7XJUS8U1XFKD7ynPgCI_3yd-KA
-	grant_type: refresh_token
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:41:14,729 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:41:14,729 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:41:14,735 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:41:14,735 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAAHAecxqqcdnfkVF4zrv8LdVqkLmXHWdGc8Ynh6ZXExDGcHvgR9BXO9czPl2NUbJGkzUivR5_bvqCvYKNYababLAa9UuIAbkOf2QqDTJ19iKWOGWZLCH8PZ-4OSVcaG_YIXDCT9N81xZvPWg7ckRBennk7Ceb6KV07eIAFXOozzGdNAEAAIAAAABXuUf4bshAXk4RJbsSfNsfHLaewdGuwvy2IntXoFHsLziwbN2GOvL-sNAv2y7A8bVUVEZTeNPEoSTjuLc4QJFbADAw5tamg2WGx0zAt6gR7m0okfAX8HEhjAzT4l2VIYbinZEAL0l2_7TJY-9yVkS6oT58xbOEvODNBK_NNA3mwmW6A3Q95Y2XTkFIIYsn4YEjAUpqBOUiHzk9i6L9SMj1Ed2gqiBGfs2ni_dZGZ_6S1h6JWXCNttW1xTJQEjGo-xKlF6klUSmAaS9xGtmh4zF9lg1eGXSvq_8o5apwM15UDOjzMPppPqm5MVB3QYQpc4eL6qHYU5nJuivi7W6wTBgH2gYqYaJ8TffFTsC8eFeBGxaS64OwswhnAVNmD8H6ictBb2k03B9s9OiUfIp6DVO
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAALWkG6KrVZRgARZLWhFAu64ygI6DSBJPTb-ZgEGCqKtpwQAAAAE-8jgjp-_6TKnZSbrfJdE8o19Q1RN438A5A47xdtoCDBbwE1UpYbrHs8YzxZTwvFGUogy96ba1hhpQ_ygp0due3QL27SXcHa_Ag3Wdord-0L4RWatCbrKvvPyn5Qi2Yeb0epYWGAsJ-Wgl_iBRtcHte88Vk86rop4pk194agos_g-b-AsSBxyRSWsUOkNYgP73YTxw1EubiB7FlxpjKISVH7SA9RXRIHA-OzCj5JeCbOTxWJP3LLCJ6mehlCMi5YQ
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:41:14,735 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:41:19,100 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:41:19,101 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:41:19,101 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 14:41:19,101 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:41:19,101 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:41:19,101 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:41:19,101 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:41:19,101 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:41:19,101 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 14:41:19,101 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:41:19,101 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:41:19,136 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:41:19,136 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:41:19,139 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:41:19,139 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:41:19,144 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:41:19,144 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAANSJXqNopxmbnkf9sok11kVxCHxRZrlWUZXa2x6PVSlQyKFX0rT2krBr2AobpFJy8n4IaX6mWAxyH2QgcaHcryQ4tixs4izA9TabcXPbDmM-PGOz8zc-Xxku_ZVvqV5vfZatNrmeuuUZfe4wdZ3x4I-NCfEvvxX2kfxlws1SzJ4HNAEAAIAAAAB0MqLun3ktmR5t90hhPs5ZanPfK58l-upcYqfCTTfdl1X896bRXIIFaWLuiuaA0jZhLelF8EVJOnBCb9jsUpI7akWc2f9kSAz9jtaUXB4tqCqFIri3l807AMwR2APuwDKNEd5pqqNbfrux-ChI9fuaK2DvgWOd8QCAltwysnCK6z-qjjDogfO-uprUsSdG0PhgfvuIL9F-Eb9hX9pMx8iUPT_2IsdjnO-wSuBlKmqYtn9UIRcjWESt_MRVfvEDX2pjOjE7MT2PEct0CIi1LTegeAspWFYPWmw4mFmiEBAwaRGfYB_UmQmuRcgsWXnpzGWAofjKMvAguGHAQLfHG-iNYPbDPZWqzQ7X0lH-TG-p53eBG3ttMLWX9m22L9QQJnRCFW_G6rm_1Iop5bPAfWZL
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAHfpJqo5t6jbCgpiLRzG2QWjQxYEYZ0DGE4OcdkmqWNAwQAAAAGD7VVXns6ug9s3JV_iCIYvr__dZgFym4L3y2QbxDFJOPR1asDPveld03kE8OKWBNd7LYzOyyTji7kDWbxh4FF1p08NEeq0ONYgoJf2Rmq6A1AWJuY84flKgnBnhi6uU5i_M26pnxSFRrFqDSy4vNIho81UaCc7PpaX3kYGEX75U0kUZSYzh27owzDsgpReF9eOYlGgFvf_uOG9S8C8lGP5MW77LyB1787PNYq8GMq-Q02Y7Smw73XS4CWRwDp_zfA
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:41:19,145 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:41:19,231 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:41:19,231 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:41:19,231 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:41:19,231 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenResourceOwnerPasswordCredentialsRequest message: {username,
-password,}
-2012-09-12 14:41:19,231 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:41:19,231 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:41:19,231 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:41:19,231 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenRefreshRequestAS (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:41:19,231 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenRefreshRequestAS
-2012-09-12 14:41:19,231 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenRefreshRequestAS (2.0) message:
-	refresh_token: Fr0J!IAAAAHfpJqo5t6jbCgpiLRzG2QWjQxYEYZ0DGE4OcdkmqWNAwQAAAAGD7VVXns6ug9s3JV_iCIYvr__dZgFym4L3y2QbxDFJOPR1asDPveld03kE8OKWBNd7LYzOyyTji7kDWbxh4FF1p08NEeq0ONYgoJf2Rmq6A1AWJuY84flKgnBnhi6uU5i_M26pnxSFRrFqDSy4vNIho81UaCc7PpaX3kYGEX75U0kUZSYzh27owzDsgpReF9eOYlGgFvf_uOG9S8C8lGP5MW77LyB1787PNYq8GMq-Q02Y7Smw73XS4CWRwDp_zfA
-	grant_type: refresh_token
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:41:19,255 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:41:19,268 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:41:19,269 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenRefreshRequestAS (2.0) message is: 
-	refresh_token: Fr0J!IAAAAHfpJqo5t6jbCgpiLRzG2QWjQxYEYZ0DGE4OcdkmqWNAwQAAAAGD7VVXns6ug9s3JV_iCIYvr__dZgFym4L3y2QbxDFJOPR1asDPveld03kE8OKWBNd7LYzOyyTji7kDWbxh4FF1p08NEeq0ONYgoJf2Rmq6A1AWJuY84flKgnBnhi6uU5i_M26pnxSFRrFqDSy4vNIho81UaCc7PpaX3kYGEX75U0kUZSYzh27owzDsgpReF9eOYlGgFvf_uOG9S8C8lGP5MW77LyB1787PNYq8GMq-Q02Y7Smw73XS4CWRwDp_zfA
-	grant_type: refresh_token
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:41:19,271 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:41:19,271 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:41:19,277 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:41:19,277 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAALKJQ9EE58vD-PNQUGKCBQFKxYEw2fQTYCz-LDdpEKrbccnkAJSFbh9TIx_QEZAYxSDc-x07aZpQNjKVRVGSYBcjnpd2aQKvfW6oG-v9uL_ahoFoRtBriVjeNsXUrZ9XqVDIgX6L2arxUU7Bb6rWf6dkZuXMGgJ_lXSQKkPsbnlGNAEAAIAAAABy1rWOB93Phf9EZ3oQURI89qg1mjRQ_nOnTGc7YUtagujc_WlhkqKEj5pyxeR4SG1y_Pbe9tqPuGv4YWALdDoVS9tYC1n6pMDhR_STRjyM_RwLYfSMOBJCCKpnKcTzJ4emTfUyMcVn4qsSNc1WlEZ4pTf_osxBv5I91Jboxj-ZrPjecEl3ky003duESYb4SMTwEGS0vXiJk2ZvlKpkNIi17HKs6IBJluEZivtkS-fUH0qDNK3mB-lnXBBD_3mglYCqGTYdhbmfgZgdv8-d8teucv4gNW8D4XqhcgHz8IyIBI5QA4g7MyDc0wRBP8vbRNjJvEGH8zUdJACpjqdf5QnolfhTYXETS8Px4slNt862wzjZTua2X5cN5kLv-lMpMgaBCmlNPW_Oh8P2hqfvreMC
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAPiOvUuSvPrIeLGZwdRJ5M6dFzpOLLTagOtKEOffo10dwQAAAAFUFOPtRBackros7kfhRfPUwMOmkq2VTQOCX3ASrS8lGHkbUMqze4B1v_iLIdbK1bT_rlwMa1kAWLLA7KdKCTBjp8cdg9uhr1LC7cUVO70P5u-slvgWzCn42vxATW5d22GijOB699lcP3DzwclbJ89mBzrMXN6Pqd_dDscYX1SLcUSHQlUPftkvWZ9wyriwNVJK3JwTk-BZb0KI-YkqrAAm-wloqDZOEU63qT7V0gs56nMHsxt1229ZbNV_Ewyl5gg
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:41:19,278 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:43:11,952 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:43:11,952 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:43:11,952 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 14:43:11,952 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:43:11,952 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:43:11,952 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:43:11,952 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:43:11,953 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:43:11,953 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 14:43:11,953 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:43:11,953 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:43:11,975 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:43:11,975 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:43:11,977 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:43:11,977 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:43:11,987 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:43:11,987 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAAKwVTg4h5yhffbfn8agtO6S0ycmxnJicV1yQOBxwMizPg_EU7qik9-QUGbn3-VWUEXTQ23I-F7B8nRKJxW0bub-J-B06Ad7jdWl05sktBOia_H5nNExLAMB4KwssO7gCMJwv8QGxyecNXrZbeE-b_eXqRAUWDieN_ZbUoWdsnJJBNAEAAIAAAAAEP5_JFqMT12rcRfrDEydEWJh0gff0p0lTKr3edbpNkSH8Rji1pdF9fW16u6EKnN9U7HxuHSNKtwWXP58io8-Yzix36Nh0z4dEHQBWzTLjcmM69uB7lIKNLG0SVfzqH1ZL4GfgeLKQ-7oE3IZmfDvqQ8YRZtZpdCDdQEaAKtg7YE3iSj9e4D39yyB0DXlDY37eyP4kudCrn30MiDRRFvHYMFmCYPzbQa-LY0_v84WG7CU0dyqHbfAEticrwaLjAPtgg1vaY9Rv8_dgj-e3FmSmFd1chmzrnKaKldOYIwHfPDQ-nU--0TLQozkVcDmka2wBaj1KnxMmQIbrF91IPMRXWcdxRvVp5mN7B0diC6Gy9kkojsOHY-_6dQpnip_GWVsE0ZecipxJ-5rcTJQris9q
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAGmbimBc4gCEMu-VSGJW74aV0wtBh6r7l5crakdE0nKQwQAAAAG8HYMkt6I32xVheYUr_B0nTust_9QYgyJRta_GFEck8jGqIuafbzEDdUydqsK7006u4VbQHXeBulpmHToKxAZxLFpC48_-cr7Vk_ewJxoBrweiwKd8KEIcsovXI4NqcS8DU2QPpkc1HyR12NB5iUZsAza7OmunTQzSCn8rQKSfwSZ_POuqYIMhXy9VZBfqNPS-zyc3MG1JgEqMa8IJOjtvTSuSB49PDoyVmBdlzn3uW2BXqdWMQVM7QUvG9wM4Rrc
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:43:11,987 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:43:12,217 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/api/values
-2012-09-12 14:43:12,218 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessProtectedResourceRequest
-2012-09-12 14:43:12,219 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessProtectedResourceRequest (2.0) message:
-	token_type: bearer
-	access_token: gAAAAKwVTg4h5yhffbfn8agtO6S0ycmxnJicV1yQOBxwMizPg_EU7qik9-QUGbn3-VWUEXTQ23I-F7B8nRKJxW0bub-J-B06Ad7jdWl05sktBOia_H5nNExLAMB4KwssO7gCMJwv8QGxyecNXrZbeE-b_eXqRAUWDieN_ZbUoWdsnJJBNAEAAIAAAAAEP5_JFqMT12rcRfrDEydEWJh0gff0p0lTKr3edbpNkSH8Rji1pdF9fW16u6EKnN9U7HxuHSNKtwWXP58io8-Yzix36Nh0z4dEHQBWzTLjcmM69uB7lIKNLG0SVfzqH1ZL4GfgeLKQ-7oE3IZmfDvqQ8YRZtZpdCDdQEaAKtg7YE3iSj9e4D39yyB0DXlDY37eyP4kudCrn30MiDRRFvHYMFmCYPzbQa-LY0_v84WG7CU0dyqHbfAEticrwaLjAPtgg1vaY9Rv8_dgj-e3FmSmFd1chmzrnKaKldOYIwHfPDQ-nU--0TLQozkVcDmka2wBaj1KnxMmQIbrF91IPMRXWcdxRvVp5mN7B0diC6Gy9kkojsOHY-_6dQpnip_GWVsE0ZecipxJ-5rcTJQris9q
-
-2012-09-12 14:43:12,219 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessProtectedResourceRequest (2.0) message is: 
-	token_type: bearer
-	access_token: gAAAAKwVTg4h5yhffbfn8agtO6S0ycmxnJicV1yQOBxwMizPg_EU7qik9-QUGbn3-VWUEXTQ23I-F7B8nRKJxW0bub-J-B06Ad7jdWl05sktBOia_H5nNExLAMB4KwssO7gCMJwv8QGxyecNXrZbeE-b_eXqRAUWDieN_ZbUoWdsnJJBNAEAAIAAAAAEP5_JFqMT12rcRfrDEydEWJh0gff0p0lTKr3edbpNkSH8Rji1pdF9fW16u6EKnN9U7HxuHSNKtwWXP58io8-Yzix36Nh0z4dEHQBWzTLjcmM69uB7lIKNLG0SVfzqH1ZL4GfgeLKQ-7oE3IZmfDvqQ8YRZtZpdCDdQEaAKtg7YE3iSj9e4D39yyB0DXlDY37eyP4kudCrn30MiDRRFvHYMFmCYPzbQa-LY0_v84WG7CU0dyqHbfAEticrwaLjAPtgg1vaY9Rv8_dgj-e3FmSmFd1chmzrnKaKldOYIwHfPDQ-nU--0TLQozkVcDmka2wBaj1KnxMmQIbrF91IPMRXWcdxRvVp5mN7B0diC6Gy9kkojsOHY-_6dQpnip_GWVsE0ZecipxJ-5rcTJQris9q
-
-2012-09-12 14:43:43,794 (GMT+1) [5] INFO  DotNetOpenAuth - DotNetOpenAuth.Core, Version=4.1.0.12182, Culture=neutral, PublicKeyToken=2780ccd10d57b246 (official)
-2012-09-12 14:43:43,804 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Message type EndUserAuthorizationImplicitRequest has more than one message part named response_type.  Inherited members will be hidden.
-2012-09-12 14:43:43,819 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:43:43,821 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:43:43,834 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 14:43:43,836 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:43:43,839 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:43:43,839 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:43:43,839 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:43:43,841 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:43:43,850 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 14:43:43,852 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:43:43,858 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:43:44,226 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:43:44,227 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:43:44,240 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:43:44,241 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:43:44,296 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:43:44,299 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAABVbQ7J-0c_WbyVe805dTmKy6GOHrAkDtQm2DZ10faTaHiGNv_L6XwAz7Ugx5HOn-eUyIQjlsyFHIgO-cACOaXY8JltScZsA16mBQptaCNjUUb-sXi1DjAHeprzI33NTOTULRajnFmR8Lc8wZTaonwCVGuKNaBlE-1nW5eYAxE2lNAEAAIAAAADa8g3uQI8hpas_d5fGMF_TC1RVP0IOE39btnlSIwMTbZuO2fTRsoNiveecpsvCPnxtCiI9cRmdjnkfWMKj1OpjcQ6DOrfLUYZ1hhrQ8rvqDODvBlzvTrE1lxYuLVONZfcZF13rYXDJZV5SUaWEp6ANgiCj0mpCO5DLw7pi93-B5RFzSkg11izKHJDNBcaAxT8QRI8y0usIOmOrmuwqLDd3rCwc3SvdZe_rT_1oHIAyP5IvRpgFYwoo-4HS7w6n9XHH7j7EgeGddNwjXrX9fduUi9YtazvDmtZ9gIatWRttcYqd9FUgyxLPSihtojWJNi2V6CsjItUiWysFiJqUofS-TMn28kGq5acZVDNHghL18dqlAyO8C67ddnUVY2L87yDC7_fbkXc_2jX4jC0DV7ot
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAGAc6dYHmkKpEvMqfLU1yXjjzN2BVuxIayGRPB5o8dfkwQAAAAEskM_blrSpz_UP5gE0akFLVHfASrc3VzUNjeovUL1WF2-aykqPWPBU35phlUfyIbCQEuHm4PaTIoQNJ6g5f1yTx9AhcIYy3dwzKn-Y7E43-7qsqys8TOXIExRQjrlceORMESMeFmtWpqSa9rXJkZCW9tFdykrQy8f7dr2g3n5H7EC0O02ac5V0pe_lYhbwTXBjVk0QOY-URbZFwCHJv-ktjK0S537XuPiHCuTvqY828YBBN-Y3DEc7VTX-VD9VwvU
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:43:44,299 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:43:49,917 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/api/values
-2012-09-12 14:43:49,918 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessProtectedResourceRequest
-2012-09-12 14:43:49,918 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessProtectedResourceRequest (2.0) message:
-	token_type: bearer
-	access_token: gAAAABVbQ7J-0c_WbyVe805dTmKy6GOHrAkDtQm2DZ10faTaHiGNv_L6XwAz7Ugx5HOn-eUyIQjlsyFHIgO-cACOaXY8JltScZsA16mBQptaCNjUUb-sXi1DjAHeprzI33NTOTULRajnFmR8Lc8wZTaonwCVGuKNaBlE-1nW5eYAxE2lNAEAAIAAAADa8g3uQI8hpas_d5fGMF_TC1RVP0IOE39btnlSIwMTbZuO2fTRsoNiveecpsvCPnxtCiI9cRmdjnkfWMKj1OpjcQ6DOrfLUYZ1hhrQ8rvqDODvBlzvTrE1lxYuLVONZfcZF13rYXDJZV5SUaWEp6ANgiCj0mpCO5DLw7pi93-B5RFzSkg11izKHJDNBcaAxT8QRI8y0usIOmOrmuwqLDd3rCwc3SvdZe_rT_1oHIAyP5IvRpgFYwoo-4HS7w6n9XHH7j7EgeGddNwjXrX9fduUi9YtazvDmtZ9gIatWRttcYqd9FUgyxLPSihtojWJNi2V6CsjItUiWysFiJqUofS-TMn28kGq5acZVDNHghL18dqlAyO8C67ddnUVY2L87yDC7_fbkXc_2jX4jC0DV7ot
-
-2012-09-12 14:43:49,919 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessProtectedResourceRequest (2.0) message is: 
-	token_type: bearer
-	access_token: gAAAABVbQ7J-0c_WbyVe805dTmKy6GOHrAkDtQm2DZ10faTaHiGNv_L6XwAz7Ugx5HOn-eUyIQjlsyFHIgO-cACOaXY8JltScZsA16mBQptaCNjUUb-sXi1DjAHeprzI33NTOTULRajnFmR8Lc8wZTaonwCVGuKNaBlE-1nW5eYAxE2lNAEAAIAAAADa8g3uQI8hpas_d5fGMF_TC1RVP0IOE39btnlSIwMTbZuO2fTRsoNiveecpsvCPnxtCiI9cRmdjnkfWMKj1OpjcQ6DOrfLUYZ1hhrQ8rvqDODvBlzvTrE1lxYuLVONZfcZF13rYXDJZV5SUaWEp6ANgiCj0mpCO5DLw7pi93-B5RFzSkg11izKHJDNBcaAxT8QRI8y0usIOmOrmuwqLDd3rCwc3SvdZe_rT_1oHIAyP5IvRpgFYwoo-4HS7w6n9XHH7j7EgeGddNwjXrX9fduUi9YtazvDmtZ9gIatWRttcYqd9FUgyxLPSihtojWJNi2V6CsjItUiWysFiJqUofS-TMn28kGq5acZVDNHghL18dqlAyO8C67ddnUVY2L87yDC7_fbkXc_2jX4jC0DV7ot
-
-2012-09-12 14:44:20,721 (GMT+1) [5] INFO  DotNetOpenAuth - DotNetOpenAuth.Core, Version=4.1.0.12182, Culture=neutral, PublicKeyToken=2780ccd10d57b246 (official)
-2012-09-12 14:44:20,773 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Message type EndUserAuthorizationImplicitRequest has more than one message part named response_type.  Inherited members will be hidden.
-2012-09-12 14:44:20,793 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:44:20,795 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:44:20,810 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 14:44:20,813 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:44:20,815 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:44:20,816 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:44:20,816 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:44:20,818 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:44:20,831 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 14:44:20,835 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:44:20,842 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:44:21,131 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:44:21,132 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:44:21,147 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:44:21,148 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:44:21,190 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:44:21,192 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAAKO-RwseLUrhiPSIs1coaL3k9UBCB8SyVDlxPNOX7ZQ6-SJCkggyIguJtOB2bpisAI5nr3SF0IIGOqJJ7OW2NT4Fgb0yp2g90wKOCf5ZsJWKbdy_ebCLmjFs_aWYhrZTnLD2JfCy_Cgrqa4ZpDuGwYeQQ0QX16Z64rWZ4eU2hE17NAEAAIAAAAAnUG5oC69_kbHvIlW3Etyp1DgHnfpuje7HhCLVYKV6QCuD4dKJSU5-GZa6mYm8SBVCZ3j4rmNoUMTHO7iA6YQSax3A2hthXU0TQKDrDXWJxPbTtcCul4QYIcgGYy5OX7BYxXAzaJ_Xmv7DW9Huz0G7rXxmrRTh5qy7JpKZuQwhPGAo1_dK_hI38RLr5f0eK7PWeNGVikYhNngIx1JECUCMXJTFn4RMYgNIMLHPJqGFdjGZHahod6kysClNAi_o6a6OKD_Tif2K34Q53uR_1ZBnEAWZOYxuYBbQD-H58XYqXIqW1Czf_yoW2d3HahEs5L-ZTSfh2UcfS2eyR9pDCKUACCGndBBSHorAMY8XdpoVC_ABgS6BFvtz4dMCS-9QQyfqkuKdIUE0BsRmrXcbk6uQ
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAGs3JMmU-bJaLGvww7_0CPQZYySVAWVdRl7oPHOkEhYOwQAAAAH4JXPFCY_eTy6Bd8ZOZORgnUCgifApPPC1kNwGRBeaxsbIuiXKBDlYsXmXv-BCrm5yu_is4IGZ1tBb-QcVzw5JfghyAAAKvVUAudYtPDo_yi8gmX3NUJUE0yVTVSIO7sQndYgkfc2WEj_-v2HwiNqXBf7RFhqbyDHTfyhQx2mGJMZ6TEo6TGq1_1yY7bTHtPURPK2CY4koLBrDhdDpKVOYruTAwLSYQwXsyP_YX36WNVZHulByAEGMzuYHgf-Hup8
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:44:21,193 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:44:21,430 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/api/values
-2012-09-12 14:44:21,430 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessProtectedResourceRequest
-2012-09-12 14:44:21,430 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessProtectedResourceRequest (2.0) message:
-	token_type: bearer
-	access_token: gAAAAKO-RwseLUrhiPSIs1coaL3k9UBCB8SyVDlxPNOX7ZQ6-SJCkggyIguJtOB2bpisAI5nr3SF0IIGOqJJ7OW2NT4Fgb0yp2g90wKOCf5ZsJWKbdy_ebCLmjFs_aWYhrZTnLD2JfCy_Cgrqa4ZpDuGwYeQQ0QX16Z64rWZ4eU2hE17NAEAAIAAAAAnUG5oC69_kbHvIlW3Etyp1DgHnfpuje7HhCLVYKV6QCuD4dKJSU5-GZa6mYm8SBVCZ3j4rmNoUMTHO7iA6YQSax3A2hthXU0TQKDrDXWJxPbTtcCul4QYIcgGYy5OX7BYxXAzaJ_Xmv7DW9Huz0G7rXxmrRTh5qy7JpKZuQwhPGAo1_dK_hI38RLr5f0eK7PWeNGVikYhNngIx1JECUCMXJTFn4RMYgNIMLHPJqGFdjGZHahod6kysClNAi_o6a6OKD_Tif2K34Q53uR_1ZBnEAWZOYxuYBbQD-H58XYqXIqW1Czf_yoW2d3HahEs5L-ZTSfh2UcfS2eyR9pDCKUACCGndBBSHorAMY8XdpoVC_ABgS6BFvtz4dMCS-9QQyfqkuKdIUE0BsRmrXcbk6uQ
-
-2012-09-12 14:44:21,430 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessProtectedResourceRequest (2.0) message is: 
-	token_type: bearer
-	access_token: gAAAAKO-RwseLUrhiPSIs1coaL3k9UBCB8SyVDlxPNOX7ZQ6-SJCkggyIguJtOB2bpisAI5nr3SF0IIGOqJJ7OW2NT4Fgb0yp2g90wKOCf5ZsJWKbdy_ebCLmjFs_aWYhrZTnLD2JfCy_Cgrqa4ZpDuGwYeQQ0QX16Z64rWZ4eU2hE17NAEAAIAAAAAnUG5oC69_kbHvIlW3Etyp1DgHnfpuje7HhCLVYKV6QCuD4dKJSU5-GZa6mYm8SBVCZ3j4rmNoUMTHO7iA6YQSax3A2hthXU0TQKDrDXWJxPbTtcCul4QYIcgGYy5OX7BYxXAzaJ_Xmv7DW9Huz0G7rXxmrRTh5qy7JpKZuQwhPGAo1_dK_hI38RLr5f0eK7PWeNGVikYhNngIx1JECUCMXJTFn4RMYgNIMLHPJqGFdjGZHahod6kysClNAi_o6a6OKD_Tif2K34Q53uR_1ZBnEAWZOYxuYBbQD-H58XYqXIqW1Czf_yoW2d3HahEs5L-ZTSfh2UcfS2eyR9pDCKUACCGndBBSHorAMY8XdpoVC_ABgS6BFvtz4dMCS-9QQyfqkuKdIUE0BsRmrXcbk6uQ
-
-2012-09-12 14:45:53,878 (GMT+1) [5] INFO  DotNetOpenAuth - DotNetOpenAuth.Core, Version=4.1.0.12182, Culture=neutral, PublicKeyToken=2780ccd10d57b246 (official)
-2012-09-12 14:45:53,890 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Message type EndUserAuthorizationImplicitRequest has more than one message part named response_type.  Inherited members will be hidden.
-2012-09-12 14:45:53,905 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:45:53,906 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:45:53,924 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 14:45:53,926 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:45:53,928 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:45:53,928 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:45:53,928 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:45:53,930 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:45:53,938 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 14:45:53,941 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:45:53,948 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:45:54,372 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:45:54,372 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:45:54,386 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:45:54,387 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:45:54,467 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:45:54,470 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAAD8lWapHxrnpascZpYSNALnJfBmw1zYP4U7Qkd6c-rhUatt_TwkOeB7qGWH53XAea1z8FgviwT5FMt9i7WWkZ1vMOUjSp5DIIGc4q-BwwdO-IY5qp5sW1FygoynU_1pbOBxlh3GZVe9ZW56XhXyfCMvUluQyAPrBIt6SzDjCoGVvNAEAAIAAAADVPO7ffV184IWuteRQhy9HM4t0mrdgeaBMjv37DBcBKyHvyph7qXbd4xgQvfVvyrI6tsB1MYZZ1RRGv8b4tfznNpaJITFK8FR3Kk5QmcwXpfRMwEhYeFGQo4cztvWWHZ9Jw8xgC-CRzDC5hj6qB8h1NH4cmLpVFJLCiBLLDtWiYunLLnyUhp2HlBGfuNVqDOrfMDCrVibuPsc8CuPAjV-lO_ZvFFaOnIee3LMVWFQ601ddZzBwEJDvScLvNClqMlBzatMFzhmnLPVEVaIei7x2KWI36v-pIDJiZK5iqShpbPgRGcCkBoU1a2cdB0wxkkxJAALBu6KBE872k9pzbJEvzejILTBydKeW6p7ML8b0Xq0BF5unaPmLtu24e8Nb2D6v7z4spjyJXaMsSHxe1UUE
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAGuwfupq_RwyZZMaDl6sG5W9Ko3fs5pbW1lmziddP_gHwQAAAAE_c3x4JnMnjO0ASiIW4CKfKY03QRm8xmy-kRME-nW33uaEayif-yx9TZhJZrqVpCdGPh3osAv6HnGyIjhMql3WwIi7dLoLwesMmmSk-azFeOiMkvWSWRYZM5ueBWmz_aX49l_5YUr4Y55Hc6jiqHTH0daWa_ZgEw7aGBrJnOPSRUBjO8r1lNW2lEDF16vyCBFwQNXAPZMmrUb9u-7Q081aSIRfeu7YoyPNxN5M7JdIfumYuiK9vETrH39_y2sT9Rw
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:45:54,470 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:46:55,168 (GMT+1) [10] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/api/values
-2012-09-12 14:46:55,169 (GMT+1) [10] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessProtectedResourceRequest
-2012-09-12 14:46:55,169 (GMT+1) [10] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessProtectedResourceRequest (2.0) message:
-	token_type: bearer
-	access_token: gAAAAD8lWapHxrnpascZpYSNALnJfBmw1zYP4U7Qkd6c-rhUatt_TwkOeB7qGWH53XAea1z8FgviwT5FMt9i7WWkZ1vMOUjSp5DIIGc4q-BwwdO-IY5qp5sW1FygoynU_1pbOBxlh3GZVe9ZW56XhXyfCMvUluQyAPrBIt6SzDjCoGVvNAEAAIAAAADVPO7ffV184IWuteRQhy9HM4t0mrdgeaBMjv37DBcBKyHvyph7qXbd4xgQvfVvyrI6tsB1MYZZ1RRGv8b4tfznNpaJITFK8FR3Kk5QmcwXpfRMwEhYeFGQo4cztvWWHZ9Jw8xgC-CRzDC5hj6qB8h1NH4cmLpVFJLCiBLLDtWiYunLLnyUhp2HlBGfuNVqDOrfMDCrVibuPsc8CuPAjV-lO_ZvFFaOnIee3LMVWFQ601ddZzBwEJDvScLvNClqMlBzatMFzhmnLPVEVaIei7x2KWI36v-pIDJiZK5iqShpbPgRGcCkBoU1a2cdB0wxkkxJAALBu6KBE872k9pzbJEvzejILTBydKeW6p7ML8b0Xq0BF5unaPmLtu24e8Nb2D6v7z4spjyJXaMsSHxe1UUE
-
-2012-09-12 14:46:55,169 (GMT+1) [10] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessProtectedResourceRequest (2.0) message is: 
-	token_type: bearer
-	access_token: gAAAAD8lWapHxrnpascZpYSNALnJfBmw1zYP4U7Qkd6c-rhUatt_TwkOeB7qGWH53XAea1z8FgviwT5FMt9i7WWkZ1vMOUjSp5DIIGc4q-BwwdO-IY5qp5sW1FygoynU_1pbOBxlh3GZVe9ZW56XhXyfCMvUluQyAPrBIt6SzDjCoGVvNAEAAIAAAADVPO7ffV184IWuteRQhy9HM4t0mrdgeaBMjv37DBcBKyHvyph7qXbd4xgQvfVvyrI6tsB1MYZZ1RRGv8b4tfznNpaJITFK8FR3Kk5QmcwXpfRMwEhYeFGQo4cztvWWHZ9Jw8xgC-CRzDC5hj6qB8h1NH4cmLpVFJLCiBLLDtWiYunLLnyUhp2HlBGfuNVqDOrfMDCrVibuPsc8CuPAjV-lO_ZvFFaOnIee3LMVWFQ601ddZzBwEJDvScLvNClqMlBzatMFzhmnLPVEVaIei7x2KWI36v-pIDJiZK5iqShpbPgRGcCkBoU1a2cdB0wxkkxJAALBu6KBE872k9pzbJEvzejILTBydKeW6p7ML8b0Xq0BF5unaPmLtu24e8Nb2D6v7z4spjyJXaMsSHxe1UUE
-
-2012-09-12 14:52:10,475 (GMT+1) [11] INFO  DotNetOpenAuth - DotNetOpenAuth.Core, Version=4.1.0.12182, Culture=neutral, PublicKeyToken=2780ccd10d57b246 (official)
-2012-09-12 14:52:10,518 (GMT+1) [11] WARN  DotNetOpenAuth.Messaging - Message type EndUserAuthorizationImplicitRequest has more than one message part named response_type.  Inherited members will be hidden.
-2012-09-12 14:52:10,537 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:52:10,538 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:52:10,551 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 14:52:10,553 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:52:10,556 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:52:10,556 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:52:10,556 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:52:10,558 (GMT+1) [11] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:52:10,572 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 14:52:10,576 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:52:10,583 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:52:10,742 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:52:10,743 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:52:10,757 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:52:10,758 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:52:10,802 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:52:10,805 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAAL-1-x1w_2HEy5vzm6syT1gaqlc9BIWzRnEJB2PqgEqF0u-aB7Jp9C85ga5Qfx03UGt6kU21Vtlxu3AEoLK4N0soVkNhogQoqtwyQyPcSldoZR7YVeX9SG3Ka4M-ggpYzMnC-p7ZAX_d3kYLjqINTT9YGVcQ4qmcc6MC4ubujRCoNAEAAIAAAAAFA6HXgLw07-ykjIcxSzP6hlievLx3o-5eL3-cyrhyew_xWs_MpW7AA5tyJ3cDZVhnajUuwH-CGabc2U2I0ACxgwDXEdSmCgvOgYyLkvtwnd3RbPorFCT26ir-L0E3_gBnKilkHsLTVHFTb9j617P5L0Ll_9MRFvnDKzGSG6JV0rreRhIG6l6rN1lP82DPfEo_tPKTejAV70QL-v8KDjf-vFJdDyP6srxZ3a2aiyEpflsWTniY3VsqIHIswXVWQIP3-YGsfzM-6OYUITSi92_vNLxZd9q8E5TZVxdqr5TrZaRV1oVTDCoREUnMP2X7aViHNnFmzM-mH9kyxD3II6WQI3y7l9gweXyfx2lGM3Pbr7kTxBQyYXpNGFX1HycMb8OVmYLcg1o2dA-jsMhwW1ro
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAJs-C_4830logXW4WvDiUXhcVsf3OqVhVrUeZc2WH-51wQAAAAEXBUGt22dT03sxuIFPIvrJDLpg3I23nzf34oMvTy5ZqHF3300RomrNjzXY-U26cQXqbdTPaDtLMzp50yPjYRGgekGUjUKJO1Frd-6FAigoR3FEnezUQDjwQrGKaxvJPF1x-vfHF8BQOAB0aTkV12Hji153oDzn-cvrVM_jF-39B7Bm5QZAW3iaR2HFdsH5NKNX9n9BZJ4ZD3EUYM66CmGETAuLEkgifkqAy4cLTS8MRaTCxsAMFxojaTw7CrfZ-s4
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:52:10,805 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:52:11,458 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:52:11,458 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:52:11,458 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:52:11,458 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenResourceOwnerPasswordCredentialsRequest message: {username,
-password,}
-2012-09-12 14:52:11,458 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:52:11,458 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:52:11,458 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:52:11,458 (GMT+1) [11] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenRefreshRequestAS (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:52:11,458 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenRefreshRequestAS
-2012-09-12 14:52:11,458 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenRefreshRequestAS (2.0) message:
-	refresh_token: Fr0J!IAAAAJs-C_4830logXW4WvDiUXhcVsf3OqVhVrUeZc2WH-51wQAAAAEXBUGt22dT03sxuIFPIvrJDLpg3I23nzf34oMvTy5ZqHF3300RomrNjzXY-U26cQXqbdTPaDtLMzp50yPjYRGgekGUjUKJO1Frd-6FAigoR3FEnezUQDjwQrGKaxvJPF1x-vfHF8BQOAB0aTkV12Hji153oDzn-cvrVM_jF-39B7Bm5QZAW3iaR2HFdsH5NKNX9n9BZJ4ZD3EUYM66CmGETAuLEkgifkqAy4cLTS8MRaTCxsAMFxojaTw7CrfZ-s4
-	grant_type: refresh_token
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:52:11,471 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:52:11,508 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:52:11,508 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenRefreshRequestAS (2.0) message is: 
-	refresh_token: Fr0J!IAAAAJs-C_4830logXW4WvDiUXhcVsf3OqVhVrUeZc2WH-51wQAAAAEXBUGt22dT03sxuIFPIvrJDLpg3I23nzf34oMvTy5ZqHF3300RomrNjzXY-U26cQXqbdTPaDtLMzp50yPjYRGgekGUjUKJO1Frd-6FAigoR3FEnezUQDjwQrGKaxvJPF1x-vfHF8BQOAB0aTkV12Hji153oDzn-cvrVM_jF-39B7Bm5QZAW3iaR2HFdsH5NKNX9n9BZJ4ZD3EUYM66CmGETAuLEkgifkqAy4cLTS8MRaTCxsAMFxojaTw7CrfZ-s4
-	grant_type: refresh_token
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:52:11,511 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:52:11,511 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:52:11,518 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:52:11,518 (GMT+1) [11] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAALkBKkt03fxb7cDOVObCUjudNB09yD3l6jaUmi8Z8tBhCPvPDdTdtxS533BKQXMyI09AKuIEj4QPcwrsev0U4GCxOsDg1tTkUj3qrJonKd0zAiz_REiuH6vvSdukIjp8vYfNi6lSAb9AUVXXp4IAfNA-MV80zXsIePKAb-vBgaMENAEAAIAAAABORL0a3paKBFg1kMcVkwvBinU_YEr79TyxRaobBPR2BRyqQ_m3nny-FSDDWW4RS-Cywh9DsDjm_eMN2ugndnPO23mELzJedUdKJC1lGEWRqrl4mCWvCK3ZHMg9slN6RxezI4-wFlb8Jd4lf6js79ANsKrU9zNRV-JkRO4RjeBhRCBL_jkV5h2OJZaNwg5G6EsCW5yFbtsIiZogtk8WFsa-RnDSIEjQUnTT87iIY-EWyZiJbg7OE9aBc2Y_1b_vM5yWi1bOW3EpbLp8NQUj7VQrUOJhae2CrVYO9JZp7bRmq6_UyX018TqFVMKQh6d_KeDLwgEisj9S5gbDqJ_66SWKtaSFgxoOVQKN3f53UYbKWjcBqXy3sZtrPG3pLZOyItlO9oxln88Elp1JZK4WAKAt
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAFq_83O8iobxe4dNj8JkLJxQNov0BSfW-1dsBLfCgeQ8wQAAAAFkMwMG8ZsuDDOPnTV-nrDwVxUGLIcgLrCm_nmryq9s6a7R_O_nZUrs8GHl1WdTOXRZAWeCVOts-fRvv4B9CCPXMvFyh6wl-E0xK4oYnmr7ZJnI2nPgHekWxClQ7Ii84TBvgAEySUfhX4PLbMHn5MGe8EXWg6ULJFhyFBInmC0Y8QB5NbKUK7eTjyR_uRYXwVFS4Syt6cM5jO9x-RJEl4WvI2pkQfuYTdchnisavOzx7SHB2F87NG4CdmjCUJNNl1c
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:52:11,518 (GMT+1) [11] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:57:09,056 (GMT+1) [5] INFO  DotNetOpenAuth - DotNetOpenAuth.Core, Version=4.1.0.12182, Culture=neutral, PublicKeyToken=2780ccd10d57b246 (official)
-2012-09-12 14:57:09,101 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Message type EndUserAuthorizationImplicitRequest has more than one message part named response_type.  Inherited members will be hidden.
-2012-09-12 14:57:09,120 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:57:09,121 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:57:09,137 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 14:57:09,140 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:57:09,142 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:57:09,143 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:57:09,143 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:57:09,146 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:57:09,156 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 14:57:09,159 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:57:09,167 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:57:09,450 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:57:09,454 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:57:09,471 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:57:09,472 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:57:09,516 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:57:09,518 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAAIv6X5iQcUvXyUuVMIByLfI7QcVccwPQMjuG2nRjGajvDDxPkLQQ9FQ5dQZt3Jk_k_14MzrEdBiu_seQuUAdLTGGfJkwpTyNSqJ87z2_0kH2rVq4Ti-fo8sqwZkgSWgZV3w20VSidZYa1Fsnyi_iIVtCM2mLEsGPtZbN5HAEkJAiNAEAAIAAAABZAX_AOMz3B_5u6d2eIlSWPYm1Qu420-QuTyRVSeUmpKltIuCuqYPtreCL8STmZr9WajOTa_j16pagyfsuldRXD4hTkoFjZ9uYgwLYDxQWGpjhQajq3zPim0euOUTHScvP13tW4GTkBhMpGliOX_8me0bav1Gq0bk6yAdIhzLopj0cDsQNeuvczwshB18HLgrefxkcE5bvY_KwfkcL04Hq8M17JE5ejz89ncD4zJc7msHzoY1_z1nrtY1QRJn8JMovANJkkrveU4h2V_RonvAS0lO5jiy0EhYHMxNFPz9NQx27zqMPMh1IqYnnzKB9iyXFkt88xd1YPM7kwYAPfSG0vSLnwN9OhqO84M3gkSNidIzFfARejzvZHlIz9Yev83O9NFSKnIFxCniWTb3hQzZT
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAEpRarU1Gts1A2rLtukVmNPuLFWeWgTCFj01bZRyIkYOwQAAAAF3PnnTcslkWWZooQFcwTEcvsKE4DORAqXEv7iG5Jl_4xtsPcFjsVseqRZ5rYeIfHUSoxD-c_7HbXpBWqwWE2ULrso6GFWXAAsjuamWEnOrJS5sfmiEFifa8atWhrstEUZibWDctDPF8d6Mlk8Jt2S9lyBgCdRgReYR_sxL6K4OgmSECaeDQ12qFrTR48nuHxXtpNBWztiu5tWlVfwe2JqHJEL7lvSJJfzO1gjHmETj-mio6hn86jCQWQgjE29Tt3g
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:57:09,518 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:57:09,730 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/api/values
-2012-09-12 14:57:09,732 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessProtectedResourceRequest
-2012-09-12 14:57:09,732 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessProtectedResourceRequest (2.0) message:
-	token_type: bearer
-	access_token: gAAAAIv6X5iQcUvXyUuVMIByLfI7QcVccwPQMjuG2nRjGajvDDxPkLQQ9FQ5dQZt3Jk_k_14MzrEdBiu_seQuUAdLTGGfJkwpTyNSqJ87z2_0kH2rVq4Ti-fo8sqwZkgSWgZV3w20VSidZYa1Fsnyi_iIVtCM2mLEsGPtZbN5HAEkJAiNAEAAIAAAABZAX_AOMz3B_5u6d2eIlSWPYm1Qu420-QuTyRVSeUmpKltIuCuqYPtreCL8STmZr9WajOTa_j16pagyfsuldRXD4hTkoFjZ9uYgwLYDxQWGpjhQajq3zPim0euOUTHScvP13tW4GTkBhMpGliOX_8me0bav1Gq0bk6yAdIhzLopj0cDsQNeuvczwshB18HLgrefxkcE5bvY_KwfkcL04Hq8M17JE5ejz89ncD4zJc7msHzoY1_z1nrtY1QRJn8JMovANJkkrveU4h2V_RonvAS0lO5jiy0EhYHMxNFPz9NQx27zqMPMh1IqYnnzKB9iyXFkt88xd1YPM7kwYAPfSG0vSLnwN9OhqO84M3gkSNidIzFfARejzvZHlIz9Yev83O9NFSKnIFxCniWTb3hQzZT
-
-2012-09-12 14:57:09,732 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessProtectedResourceRequest (2.0) message is: 
-	token_type: bearer
-	access_token: gAAAAIv6X5iQcUvXyUuVMIByLfI7QcVccwPQMjuG2nRjGajvDDxPkLQQ9FQ5dQZt3Jk_k_14MzrEdBiu_seQuUAdLTGGfJkwpTyNSqJ87z2_0kH2rVq4Ti-fo8sqwZkgSWgZV3w20VSidZYa1Fsnyi_iIVtCM2mLEsGPtZbN5HAEkJAiNAEAAIAAAABZAX_AOMz3B_5u6d2eIlSWPYm1Qu420-QuTyRVSeUmpKltIuCuqYPtreCL8STmZr9WajOTa_j16pagyfsuldRXD4hTkoFjZ9uYgwLYDxQWGpjhQajq3zPim0euOUTHScvP13tW4GTkBhMpGliOX_8me0bav1Gq0bk6yAdIhzLopj0cDsQNeuvczwshB18HLgrefxkcE5bvY_KwfkcL04Hq8M17JE5ejz89ncD4zJc7msHzoY1_z1nrtY1QRJn8JMovANJkkrveU4h2V_RonvAS0lO5jiy0EhYHMxNFPz9NQx27zqMPMh1IqYnnzKB9iyXFkt88xd1YPM7kwYAPfSG0vSLnwN9OhqO84M3gkSNidIzFfARejzvZHlIz9Yev83O9NFSKnIFxCniWTb3hQzZT
-
-2012-09-12 14:57:57,781 (GMT+1) [5] INFO  DotNetOpenAuth - DotNetOpenAuth.Core, Version=4.1.0.12182, Culture=neutral, PublicKeyToken=2780ccd10d57b246 (official)
-2012-09-12 14:57:57,836 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Message type EndUserAuthorizationImplicitRequest has more than one message part named response_type.  Inherited members will be hidden.
-2012-09-12 14:57:57,856 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/OAuth/Token
-2012-09-12 14:57:57,858 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: POST http://localhost:30777/OAuth/Token
-2012-09-12 14:57:57,874 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.AuthServer.Messages.AccessTokenRefreshRequestAS message: {refresh_token,}
-2012-09-12 14:57:57,877 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.AccessTokenAuthorizationCodeRequestAS message: {code,}
-2012-09-12 14:57:57,880 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest message: {response_type,}
-2012-09-12 14:57:57,880 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationImplicitRequest message: {response_type,}
-2012-09-12 14:57:57,880 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging - The following required parameters were missing from the DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse message: {error,}
-2012-09-12 14:57:57,882 (GMT+1) [5] WARN  DotNetOpenAuth.Messaging - Multiple message types seemed to fit the incoming data: {AccessTokenResourceOwnerPasswordCredentialsRequest (2.0),
-AccessTokenClientCredentialsRequest (2.0),}
-2012-09-12 14:57:57,894 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessTokenResourceOwnerPasswordCredentialsRequest
-2012-09-12 14:57:57,897 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message:
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:57:57,905 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:57:58,199 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement applied to message.
-2012-09-12 14:57:58,199 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessTokenResourceOwnerPasswordCredentialsRequest (2.0) message is: 
-	username: steven
-	password: pwd
-	scope: http://localhost:30777/api/values
-	grant_type: password
-	client_id: samplewebapiconsumer
-	client_secret: samplesecret
-
-2012-09-12 14:57:58,211 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send AccessTokenSuccessResponse (2.0) message.
-2012-09-12 14:57:58,212 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement did not apply to message.
-2012-09-12 14:57:58,256 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement did not apply to message.
-2012-09-12 14:57:58,258 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing AccessTokenSuccessResponse (2.0) message for <response>: 
-	access_token: gAAAAAVFbNX1lKaWMKSW2kCtmOEv5XtwkHX5zo9Jnv044nM0L2TxcuU_OxlGTJeGC2jM_A-YbF6He8769YGkWmO0rvi0C8YNfyuHDz8uuPGvJZME9G7ERMg8dg5njGGk4KkCCNdUmw4K_st4dw88nwkOcPPEZaOnwLeMz8_oyRaPi_I4NAEAAIAAAABmN9BX881CiLjZ8st4LJ-znJn_icmCF7vI5QJsKIayf5Pv6SnD107S9F4lVrcEZVXVCRl_LDEGtwrT8SMLs2xvk2h12FvAPLwr3MEaEAbWFFiywDW4t2bkuGj1INqApqdGOktdiPvnjfk-eDUM4zg192I-xtsl4syDFNrBNoAbmBFpl0GM7jpMmZaqaLFG06x7e7AH4k2RFHOAFyZevKmks5225vJc-kzeCJ5I7EJEz57Yis7HNBzwe8BsvUsU4bteSGfTD1fR9QAvR1sElYt3TnidZpYR9uCqXC2BHnYs8BruR9rKqrmAuTRMBxhS3mu5ZEIc8XKz6QZSI2SpzwUJRe0qMCPstv6PzsoueCDEhC8TYKtC39uTVh3bAwWlrkUWayh3GK_Yg02jyVdddhcE
-	token_type: bearer
-	expires_in: 1200
-	refresh_token: Fr0J!IAAAAGopAANjvDMGG2SD2VeR490bdXZcsurHqjmoE-g7ZlXIwQAAAAFyl6qh2zL327ZgZecJXZ7w_T3HbHwJ5u7lynY-SucCodAZqzh-qV9wvbB5_xBtq5k50ocvJdwCJn4uIUKYXytTdO_yUYakET5pzo0te2oDv--dEvERQTrPTwPzLn7VuX4N9ZJ191bLn9rec5dHs0-ZqCE4xPkC51x1OftnXotXwZ28yaUEOe_uJFd3_cMZsmnTu7UYQusBWjo7EHUOuoQf8ADcR8-ugfIBah9ia24Hgavm8m35LUf6yFB73r9UlWQ
-	scope: http://localhost:30777/api/values
-
-2012-09-12 14:57:58,259 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: AccessTokenSuccessResponse
-2012-09-12 14:57:58,446 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:30777/api/values
-2012-09-12 14:57:58,449 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: AccessProtectedResourceRequest
-2012-09-12 14:57:58,449 (GMT+1) [5] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming AccessProtectedResourceRequest (2.0) message:
-	token_type: bearer
-	access_token: gAAAAAVFbNX1lKaWMKSW2kCtmOEv5XtwkHX5zo9Jnv044nM0L2TxcuU_OxlGTJeGC2jM_A-YbF6He8769YGkWmO0rvi0C8YNfyuHDz8uuPGvJZME9G7ERMg8dg5njGGk4KkCCNdUmw4K_st4dw88nwkOcPPEZaOnwLeMz8_oyRaPi_I4NAEAAIAAAABmN9BX881CiLjZ8st4LJ-znJn_icmCF7vI5QJsKIayf5Pv6SnD107S9F4lVrcEZVXVCRl_LDEGtwrT8SMLs2xvk2h12FvAPLwr3MEaEAbWFFiywDW4t2bkuGj1INqApqdGOktdiPvnjfk-eDUM4zg192I-xtsl4syDFNrBNoAbmBFpl0GM7jpMmZaqaLFG06x7e7AH4k2RFHOAFyZevKmks5225vJc-kzeCJ5I7EJEz57Yis7HNBzwe8BsvUsU4bteSGfTD1fR9QAvR1sElYt3TnidZpYR9uCqXC2BHnYs8BruR9rKqrmAuTRMBxhS3mu5ZEIc8XKz6QZSI2SpzwUJRe0qMCPstv6PzsoueCDEhC8TYKtC39uTVh3bAwWlrkUWayh3GK_Yg02jyVdddhcE
-
-2012-09-12 14:57:58,449 (GMT+1) [5] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received AccessProtectedResourceRequest (2.0) message is: 
-	token_type: bearer
-	access_token: gAAAAAVFbNX1lKaWMKSW2kCtmOEv5XtwkHX5zo9Jnv044nM0L2TxcuU_OxlGTJeGC2jM_A-YbF6He8769YGkWmO0rvi0C8YNfyuHDz8uuPGvJZME9G7ERMg8dg5njGGk4KkCCNdUmw4K_st4dw88nwkOcPPEZaOnwLeMz8_oyRaPi_I4NAEAAIAAAABmN9BX881CiLjZ8st4LJ-znJn_icmCF7vI5QJsKIayf5Pv6SnD107S9F4lVrcEZVXVCRl_LDEGtwrT8SMLs2xvk2h12FvAPLwr3MEaEAbWFFiywDW4t2bkuGj1INqApqdGOktdiPvnjfk-eDUM4zg192I-xtsl4syDFNrBNoAbmBFpl0GM7jpMmZaqaLFG06x7e7AH4k2RFHOAFyZevKmks5225vJc-kzeCJ5I7EJEz57Yis7HNBzwe8BsvUsU4bteSGfTD1fR9QAvR1sElYt3TnidZpYR9uCqXC2BHnYs8BruR9rKqrmAuTRMBxhS3mu5ZEIc8XKz6QZSI2SpzwUJRe0qMCPstv6PzsoueCDEhC8TYKtC39uTVh3bAwWlrkUWayh3GK_Yg02jyVdddhcE
-

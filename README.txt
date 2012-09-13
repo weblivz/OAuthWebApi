@@ -9,11 +9,12 @@ Couple of isses I could do with some help/fresh set of eyes on (you can find the
 
 Sample Instructions
 ===================
-1. Run the SQL Script in the Model folder.
-2. Add a user:
+1. Create a database called OAuthWebAPI
+2. Run the SQL Script in the Model folder.
+3. Add a user:
 	Username=steven 
 	Password=pwd
-3. Add a client:
+4. Add a client:
 	ClientIdentifier=samplewebapiconsumer
 	ClientSecret=samplesecret
 	Callback=http://localhost:40551/
